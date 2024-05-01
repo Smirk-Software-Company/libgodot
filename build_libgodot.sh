@@ -5,7 +5,6 @@ set -eux
 BASE_DIR="$( cd "$(dirname "$0")" ; pwd -P )"
 
 GODOT_DIR="$BASE_DIR/godot"
-GODOT_CPP_DIR="$BASE_DIR/godot-cpp"
 SWIFT_GODOT_DIR="$BASE_DIR/SwiftGodot"
 SWIFT_GODOT_KIT_DIR="$BASE_DIR/SwiftGodotKit"
 BUILD_DIR=$BASE_DIR/build
@@ -122,9 +121,6 @@ fi
 cd $GODOT_DIR
 scons p=$target_platform target=$target $target_build_options library_type=shared_library
 cp -v $target_godot $BUILD_DIR/libgodot.$lib_suffix
-
-cp -v $BUILD_DIR/extension_api.json $GODOT_CPP_DIR/gdextension/
-cp -v $GODOT_DIR/core/extension/gdextension_interface.h $GODOT_CPP_DIR/gdextension/
 
 if [ "$target_platform" = "ios" ]
 then
