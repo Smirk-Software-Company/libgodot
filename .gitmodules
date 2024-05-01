@@ -3,7 +3,8 @@
 	url = ../godot
 [submodule "SwiftGodot"]
 	path = SwiftGodot
-	url = ../SwiftGodot
+	url = https://github.com/Smirk-Software-Company/SwiftGodot.git
+	branch = libgodot-4.3
 [submodule "SwiftGodotKit"]
 	path = SwiftGodotKit
 	url = https://github.com/Smirk-Software-Company/SwiftGodotKit.git
